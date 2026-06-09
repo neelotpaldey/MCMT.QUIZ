@@ -2,6 +2,21 @@
 # 🎓 Online Examination System – PHP
 
 A full-featured, production-ready online examination system built in PHP + MySQL.
+Designed and Built by @neelotpaldey
+
+<p align="center">
+  <a href="https://in.linkedin.com/in/neelotpaldey">
+    <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
+  </a>
+
+  <a href="https://orcid.org/0009-0008-4759-7664">
+    <img src="https://img.shields.io/badge/ORCID-Researcher-A6CE39?style=for-the-badge&logo=orcid&logoColor=white" />
+  </a>
+
+  <a href="mailto:mcmt.neelotpal@gmail.com">
+    <img src="https://img.shields.io/badge/Email-Contact-EA4335?style=for-the-badge&logo=gmail&logoColor=white" />
+  </a>
+</p>
 
 ---
 
