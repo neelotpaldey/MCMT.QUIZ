@@ -1,0 +1,272 @@
+/* developed by @neelotpal.dey */
+/* ── Theme toggle button ───────────────────────────────────────── */
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 50px;
+  border: 1px solid var(--theme-toggle-border, rgba(255, 255, 255, 0.15));
+  background: var(--theme-toggle-bg, rgba(255, 255, 255, 0.08));
+  color: inherit;
+  font-family: inherit;
+  font-size: 0.82rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.2s, background 0.2s, border-color 0.2s;
+  white-space: nowrap;
+}
+
+.theme-toggle:hover {
+  opacity: 0.9;
+}
+
+.theme-toggle-fixed {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 200;
+}
+
+.theme-toggle-sidebar {
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 0.7rem;
+}
+
+.theme-toggle-inline {
+  flex-shrink: 0;
+}
+
+/* ── Admin light mode ──────────────────────────────────────────── */
+html[data-theme="light"] {
+  --dark: #eef2f7;
+  --sidebar: #ffffff;
+  --card: #ffffff;
+  --border: rgba(26, 35, 50, 0.12);
+  --white: #1a2332;
+  --muted: rgba(26, 35, 50, 0.55);
+  --theme-toggle-bg: #ffffff;
+  --theme-toggle-border: rgba(26, 35, 50, 0.15);
+}
+
+html[data-theme="light"] .topbar {
+  background: rgba(255, 255, 255, 0.92);
+}
+
+html[data-theme="light"] .sb-link {
+  color: rgba(26, 35, 50, 0.65);
+}
+
+html[data-theme="light"] .sb-link:hover,
+html[data-theme="light"] .sb-link.active {
+  color: var(--white);
+}
+
+html[data-theme="light"] .tbl tr:hover td {
+  background: rgba(26, 35, 50, 0.03);
+}
+
+html[data-theme="light"] .tbl td {
+  border-bottom-color: rgba(26, 35, 50, 0.06);
+}
+
+html[data-theme="light"] .form-control {
+  background: #f5f7fa;
+  color: #1a2332;
+}
+
+html[data-theme="light"] .form-control:focus {
+  background: #ffffff;
+}
+
+html[data-theme="light"] .form-control option {
+  background: #ffffff;
+  color: #1a2332;
+}
+
+html[data-theme="light"] .btn-outline {
+  color: rgba(26, 35, 50, 0.7);
+}
+
+html[data-theme="light"] .btn-outline:hover {
+  color: #1a2332;
+  border-color: rgba(26, 35, 50, 0.25);
+}
+
+html[data-theme="light"] .tabs {
+  background: rgba(26, 35, 50, 0.04);
+}
+
+html[data-theme="light"] .tab {
+  color: var(--muted);
+}
+
+html[data-theme="light"] .page-btn {
+  color: var(--muted);
+}
+
+html[data-theme="light"] .slider {
+  background: rgba(26, 35, 50, 0.15);
+}
+
+/* ── Student light mode variables ──────────────────────────────── */
+html[data-theme="light"] body.student-page,
+html[data-theme="light"] body.student-exam {
+  --border: rgba(26, 35, 50, 0.12);
+  --card: rgba(255, 255, 255, 0.95);
+  --white: #1a2332;
+}
+
+html[data-theme="light"] {
+  --navy: #eef2f7;
+  --ocean: #dbe4f0;
+  --bg: #eef2f7;
+  --text: #1a2332;
+  --glass: rgba(255, 255, 255, 0.9);
+  --card-student: #ffffff;
+  --topbar-bg: rgba(255, 255, 255, 0.92);
+  --footer-bg: rgba(255, 255, 255, 0.92);
+  --text-muted: rgba(26, 35, 50, 0.55);
+  --text-soft: rgba(26, 35, 50, 0.75);
+  --input-bg: #f5f7fa;
+  --palette-bg: rgba(255, 255, 255, 0.6);
+  --modal-bg: #ffffff;
+  --overlay-bg: rgba(26, 35, 50, 0.45);
+  --grad-student: radial-gradient(ellipse 80% 60% at 20% -10%, rgba(30, 136, 229, 0.12) 0%, transparent 55%);
+  --grad-login: radial-gradient(ellipse 80% 60% at 20% -10%, rgba(30, 136, 229, 0.15) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 50% at 90% 110%, rgba(255, 183, 3, 0.08) 0%, transparent 55%);
+}
+
+html[data-theme="light"] body.student-page {
+  background-image: var(--grad-student, var(--grad-login));
+}
+
+html[data-theme="light"] body.student-login {
+  background-image: var(--grad-login);
+}
+
+html[data-theme="light"] .student-page .subtitle,
+html[data-theme="light"] .student-page .sub,
+html[data-theme="light"] .student-login .subtitle,
+html[data-theme="light"] .student-login .sub,
+html[data-theme="light"] .student-login .note,
+html[data-theme="light"] .student-login .info-note,
+html[data-theme="light"] .student-login label {
+  color: var(--text-muted);
+}
+
+html[data-theme="light"] .student-page .topbar,
+html[data-theme="light"] .student-page .footer-bar {
+  background: var(--topbar-bg);
+}
+
+html[data-theme="light"] .student-page .content-panel,
+html[data-theme="light"] .student-page .sidebar-card,
+html[data-theme="light"] .student-login .card,
+html[data-theme="light"] .student-submit .card {
+  background: var(--card-student);
+  box-shadow: 0 12px 40px rgba(26, 35, 50, 0.08);
+}
+
+html[data-theme="light"] .student-page .instruction-list li,
+html[data-theme="light"] .student-page .agreement {
+  color: var(--text-soft);
+}
+
+html[data-theme="light"] .student-page .sidebar-card h4,
+html[data-theme="light"] .student-page .q-timer-mini,
+html[data-theme="light"] .student-page .palette-header,
+html[data-theme="light"] .student-page .leg-item,
+html[data-theme="light"] .student-page .marks-badge {
+  color: var(--text-muted);
+}
+
+html[data-theme="light"] .student-page .q-text {
+  color: var(--text-soft);
+}
+
+html[data-theme="light"] .student-login input,
+html[data-theme="light"] .student-login .card {
+  background: var(--card-student);
+}
+
+html[data-theme="light"] body.student-submit {
+  --bg: #eef2f7;
+  --text: #1a2332;
+  --muted: rgba(26, 35, 50, 0.55);
+  --card: #ffffff;
+  --border: rgba(26, 35, 50, 0.12);
+  --grad: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(30, 136, 229, 0.12) 0%, transparent 55%);
+  --shadow: 0 20px 48px rgba(26, 35, 50, 0.12);
+}
+
+html[data-theme="light"] .student-login input {
+  background: var(--input-bg);
+  color: #1a2332;
+}
+
+html[data-theme="light"] .student-login input::-webkit-calendar-picker-indicator {
+  filter: none;
+  opacity: 0.6;
+}
+
+html[data-theme="light"] .student-exam .topbar {
+  background: var(--topbar-bg);
+}
+
+html[data-theme="light"] .student-exam .palette {
+  background: var(--palette-bg);
+}
+
+html[data-theme="light"] .student-exam .option {
+  background: #f5f7fa;
+  border-color: rgba(26, 35, 50, 0.1);
+}
+
+html[data-theme="light"] .student-exam .option:hover {
+  background: rgba(30, 136, 229, 0.08);
+}
+
+html[data-theme="light"] .student-exam .btn-clear,
+html[data-theme="light"] .student-exam .btn-prev {
+  background: #f0f3f7;
+  color: rgba(26, 35, 50, 0.75);
+}
+
+html[data-theme="light"] .student-exam .modal {
+  background: var(--modal-bg);
+}
+
+html[data-theme="light"] .student-exam .modal-overlay {
+  background: var(--overlay-bg);
+}
+
+html[data-theme="light"] .student-exam .fullscreen-warn {
+  background: rgba(238, 242, 247, 0.98);
+}
+
+html[data-theme="light"] .student-exam .warn-sub,
+html[data-theme="light"] .student-exam .modal-stat-lbl {
+  color: var(--text-muted);
+}
+
+html[data-theme="light"] .student-exam .btn-cancel {
+  color: rgba(26, 35, 50, 0.65);
+}
+
+html[data-theme="light"] .admin-login .card {
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 20px 48px rgba(26, 35, 50, 0.12);
+}
+
+html[data-theme="light"] .admin-login label,
+html[data-theme="light"] .admin-login .sub,
+html[data-theme="light"] .admin-login .note {
+  color: var(--text-muted);
+}
+
+html[data-theme="light"] .admin-login input {
+  background: var(--input-bg);
+  color: #1a2332;
+}
